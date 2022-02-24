@@ -1,7 +1,11 @@
 import React from 'react'
+import NavBar from '../Components/NavBar'
 
 export default function SearchPage() {
   return (
-    <h1>search</h1>
+    <div>
+      <NavBar/>
+      <h1>Search Page</h1>
+    </div>
   )
 }

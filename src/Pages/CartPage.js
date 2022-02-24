@@ -4,12 +4,14 @@ import CartItem from "../Components/CartItem";
 
 import left from "../Assets/circle-chevron-left-solid.svg";
 import right from "../Assets/circle-chevron-right-solid.svg";
+import NavBar from "../Components/NavBar";
 
 export default function CartPage() {
   const item = 1;
   const price = 120;
   return (
     <div>
+      <NavBar/>
       <div className={classes.title}>
         <h1 className={classes.header}>Shopping List</h1>
         <h2 className={classes.subtitle}>
