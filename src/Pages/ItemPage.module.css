@@ -5,11 +5,11 @@
   justify-content: center;
 }
 .card {
-  background: rgb(195, 136, 231);
+  background: rgb(226, 159, 101);
   background: linear-gradient(
-    84deg,
-    rgba(195, 136, 231, 1) 35%,
-    rgba(216, 192, 255, 1) 100%
+    66deg,
+    rgba(226, 159, 101, 1) 39%,
+    rgba(247, 217, 196, 1) 100%
   );
 
   border-radius: 2rem;

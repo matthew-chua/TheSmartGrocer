@@ -21,12 +21,8 @@
   width: 88%;
   height: 2.5rem;
   border-radius: 3rem;
-  border-color: rgb(195, 136, 231);
-  border-color: linear-gradient(
-    84deg,
-    rgba(195, 136, 231, 1) 35%,
-    rgba(216, 192, 255, 1) 100%
-  );
+  border-color: rgb(226,159,101);
+  border-color: linear-gradient(66deg, rgba(226,159,101,1) 39%, rgba(247,217,196,1) 100%);
   font-size: 18px;
 }
 .search {

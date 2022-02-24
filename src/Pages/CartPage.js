@@ -9,7 +9,7 @@ import Recommendation from "../Components/Recommendation";
 
 export default function CartPage() {
   const [numberOfItems, setNumberOfItems] = useState(0);
-  const price = 120;
+  const price = 23;
 
   const [cartItems, setCartItems] = useState([]);
 
@@ -23,10 +23,14 @@ export default function CartPage() {
       setNumberOfItems(cartItems.length);
     }
   }, [cartItems]);
+  const [cheapest, setCheapest] = useState(true);
 
-  const cheapestHandler = () => {};
+  const cheapestHandler = () => {
+    setCheapest(true);
+  };
 
   const nearestHandler = async () => {
+    setCheapest(false);
     navigator.geolocation.getCurrentPosition((position) => {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
@@ -36,13 +40,25 @@ export default function CartPage() {
   const reccs = [
     {
       location: "FairPrice Xtra (Jurong Point)",
-      info: "$122",
-      locationID: "ChIJgUbEo8cfqokR5lP9_Wh_DaM"
+      info: "$23",
+      locationID: "ChIJmRnrx-wP2jERsMlAFDWng68",
     },
     {
-      location: "FairPrice Xtra (Segar Rd)",
-      info: "12km",
-      locationID: "GhIJQWDl0CIeQUARxks3icF8U8A"
+      location: "ShengShiong Jurong West Ave 5",
+      info: "$26",
+      locationID: "ChIJpSUUNq0P2jERckCJMy3euQ4",
+    },
+  ];
+  const nearest = [
+    {
+      location: "ShengShiong Jurong West Ave 5",
+      info: "3km",
+      locationID: "ChIJpSUUNq0P2jERckCJMy3euQ4",
+    },
+    {
+      location: "FairPrice Xtra (Jurong Point)",
+      info: "5km",
+      locationID: "ChIJmRnrx-wP2jERsMlAFDWng68",
     },
   ];
 
@@ -51,6 +67,7 @@ export default function CartPage() {
       <NavBar />
       <div className={classes.title}>
         <h1 className={classes.header}>Shopping List</h1>
+        
         <h2 className={classes.subtitle}>
           Save your favourite items here for easy access!
         </h2>
@@ -87,19 +104,19 @@ export default function CartPage() {
             <p className={classes.subtitle}>I want the:</p>
           </div>
           <div className={classes.btnContainer}>
-            <button className={classes.btn1}>
+            <button className={classes.btn1} onClick={nearestHandler}>
               <p className={classes.btnText}>📍 Nearest</p>
             </button>
-            <button className={classes.btn2}>
+            <button className={classes.btn2} onClick={cheapestHandler}>
               <p className={classes.btnText}>💸 Cheapest</p>
             </button>
           </div>
 
           <div className={classes.store}>
             <h1 className={classes.header2}>Recommended Stores</h1>
-            {reccs.map((recc) => (
-              <Recommendation data={recc} />
-            ))}
+            {cheapest && reccs.map((recc) => <Recommendation data={recc} />)}
+
+            {!cheapest && nearest.map((recc) => <Recommendation data={recc} />)}
           </div>
         </div>
       )}

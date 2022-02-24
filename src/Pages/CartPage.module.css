@@ -3,6 +3,7 @@
 }
 .header {
   font-family: "Lobster Two", cursive;
+  padding-left: 1rem;
 }
 
 .header2 {
@@ -14,8 +15,9 @@
 
 .subtitle {
   font-family: "Roboto", sans-serif;
-  font-size: 3vw;
+  font-size: 1rem;
   font-style: italic;
+  padding-left: 1rem;
 }
 
 .navigator {
@@ -44,7 +46,7 @@
 }
 
 .text {
-  padding-left: 1rem;
+  padding-left: 2rem;
   font-family: "Roboto", sans-serif;
 }
 
@@ -87,11 +89,11 @@
 .btn2 {
   width: 40vw;
   height: 7vh;
-  background: rgb(195, 136, 231);
+  background: rgb(226, 159, 101);
   background: linear-gradient(
-    84deg,
-    rgba(195, 136, 231, 1) 35%,
-    rgba(216, 192, 255, 1) 100%
+    66deg,
+    rgba(226, 159, 101, 1) 39%,
+    rgba(247, 217, 196, 1) 100%
   );
   color: black;
   border: none;
@@ -103,11 +105,11 @@
 }
 .btn1:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 0 3px 3px rgba(219, 191, 254, 0.3);
-  box-shadow: 0 0 3px 3px rgba(219, 191, 254, 0.3);
+  -webkit-box-shadow: 0 0 3px 3px rgba(254, 227, 191, 0.3);
+  box-shadow: 0 0 3px 3px rgba(254, 227, 191, 0.3);
 }
 .btn1:active {
-  background-color: rgba(219, 191, 254, 0.3);
+  background-color: rgba(254, 227, 191, 0.3);
   transition: background-color 0.2s;
 }
 
@@ -125,11 +127,11 @@
   width: 87vw;
   height: 30vh;
   margin: 7%;
-  background: rgb(195, 136, 231);
+  background: rgb(226, 159, 101);
   background: linear-gradient(
-    84deg,
-    rgba(195, 136, 231, 1) 35%,
-    rgba(216, 192, 255, 1) 100%
+    66deg,
+    rgba(226, 159, 101, 1) 39%,
+    rgba(247, 217, 196, 1) 100%
   );
   border-radius: 15px;
   display: flex;

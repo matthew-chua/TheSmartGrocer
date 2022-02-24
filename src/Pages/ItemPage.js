@@ -57,9 +57,8 @@ export default function ItemPage() {
   const recommended = [
     {
       itemID: 1,
-      name: "Kirin Beer",
-      image: "www.google.com",
-      reviews: "4.5/5",
+      name: "Kirin Ichiban",
+      image: "https://images.heb.com/is/image/HEBGrocery/000121654?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0",
       price: "12",
       quantity: "12x330ml",
       stock: 3,
@@ -67,17 +66,15 @@ export default function ItemPage() {
     {
       itemID: 2,
       name: "Kirin Black",
-      image: "www.google.com",
-      reviews: "4.2/5",
+      image: "https://www.wine-searcher.com/images/labels/10/33/10961033.jpg?width=260&height=260&fit=bounds&canvas=260,260",
       price: "11",
       quantity: "24x330ml",
       stock: 3,
     },
     {
       itemID: 3,
-      name: "Kirin Black",
-      image: "www.google.com",
-      reviews: "4.2/5",
+      name: "Kirin Ichiban",
+      image: "https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/13008594_RXL1_20210217.jpg",
       price: "11",
       quantity: "24x330ml",
       stock: 3,

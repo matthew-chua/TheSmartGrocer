@@ -12,9 +12,10 @@
 
 .image {
   width: 6rem;
+  padding-bottom: 1rem;
 }
 .name {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: "Lobster Two", cursive;
   margin: 0;
   margin-bottom: 0.5rem;
@@ -40,7 +41,6 @@
   justify-content: space-between;
 }
 .icon {
-  color: #cba4ff;
   font-size: 1.5rem;
   z-index: 999;
 }

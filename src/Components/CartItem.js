@@ -20,7 +20,7 @@ export default function CartItem(props) {
     <div className={classes.root}>
       <img
         className={classes.image}
-        src="https://produits.bienmanger.com/5799-0w0h0_Kirin_Ichiban_Biere_Blonde_Japonaise.jpg"
+        src={props.data.image}
       />
       <h4 className={classes.header}>{props.data.name}</h4>
       <p className={classes.content}>12 x 350ml</p>
