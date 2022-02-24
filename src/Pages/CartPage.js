@@ -66,12 +66,19 @@ export default function CartPage() {
     },
   ];
 
+  const removeCart = () => {
+    localStorage.removeItem("results");
+    window.location.reload();
+  }
+
   return (
     <div>
       <NavBar />
       <div className={classes.title}>
+        <div className={classes.top}>
         <h1 className={classes.header}>Shopping List</h1>
-
+        <i class="fa fa-trash" style={{"font-size": "3rem"}} onClick={removeCart}></i>
+        </div>
         <h2 className={classes.subtitle}>
           Save your favourite items here for easy access!
         </h2>
