@@ -10,6 +10,13 @@ export default function CartPage() {
   const item = 1;
   const price = 120;
 
+  const getResults = () => {
+    const result = localStorage.getItem("results");
+    console.log(JSON.parse(result));
+  };
+
+  getResults();
+
   const resultArray = [
     {
       itemID: 1,
@@ -18,7 +25,7 @@ export default function CartPage() {
       reviews: "4.5/5",
       price: "12",
       quantity: "12x330ml",
-      stock: 5
+      stock: 5,
     },
     {
       itemID: 2,
@@ -27,7 +34,7 @@ export default function CartPage() {
       reviews: "4.2/5",
       price: "11",
       quantity: "24x330ml",
-      stock: 10
+      stock: 10,
     },
     {
       itemID: 3,
@@ -36,7 +43,7 @@ export default function CartPage() {
       reviews: "4.2/5",
       price: "11",
       quantity: "24x330ml",
-      stock: 4
+      stock: 4,
     },
   ];
 
@@ -57,7 +64,7 @@ export default function CartPage() {
 
       <div className={classes.results}>
         {resultArray.map((item) => (
-          <CartItem data={item} key={item.key}/>
+          <CartItem data={item} key={item.key} />
         ))}
       </div>
 

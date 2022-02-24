@@ -40,6 +40,12 @@ export default function SearchPage() {
     },
   ];
 
+  localStorage.setItem("results", JSON.stringify(resultArray));
+
+  const clearResults = () => {
+    localStorage.clear()
+  }
+
   
 
   return (
@@ -47,7 +53,7 @@ export default function SearchPage() {
       <NavBar />
       <div className={classes.root}>
         <div className={classes.search}>
-          <input className={classes.searchBar}/>
+          <input className={classes.searchBar} />
         </div>
         <p className={classes.subtitle}>3 results for 'kirin'</p>
         <div className={classes.results}>
