@@ -15,7 +15,10 @@ export default function Location(props) {
           <p className={classes.text}>{props.data.openingHours}</p>
           <p className={classes.text}>In Stock: {props.data.stock}</p>
         </div>
+        <div className={classes.bottomRight}>
         <h3 className={classes.distance}>{props.data.price}</h3>
+        {props.data.promo && <p className={classes.onPromo}>On Promo!</p>}
+        </div>
       </div>
     </div>
   );

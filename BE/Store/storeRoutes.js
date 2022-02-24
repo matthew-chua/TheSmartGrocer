@@ -6,7 +6,7 @@ const {
 
 const {
     initMap
-} = require("../test.js");
+} = require("../test");
 const router = express.Router();
 
 // Routes (They all should just be 1 line)

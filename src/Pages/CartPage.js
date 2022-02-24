@@ -5,6 +5,7 @@ import CartItem from "../Components/CartItem";
 import left from "../Assets/circle-chevron-left-solid.svg";
 import right from "../Assets/circle-chevron-right-solid.svg";
 import NavBar from "../Components/NavBar";
+import Recommendation from "../Components/Recommendation";
 
 export default function CartPage() {
   const [numberOfItems, setNumberOfItems] = useState(0);
@@ -19,10 +20,31 @@ export default function CartPage() {
 
   useEffect(() => {
     if (cartItems) {
-      console.log(cartItems.length);
       setNumberOfItems(cartItems.length);
     }
   }, [cartItems]);
+
+  const cheapestHandler = () => {};
+
+  const nearestHandler = async () => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+    });
+  };
+
+  const reccs = [
+    {
+      location: "FairPrice Xtra (Jurong Point)",
+      info: "$122",
+      locationID: "ChIJgUbEo8cfqokR5lP9_Wh_DaM"
+    },
+    {
+      location: "FairPrice Xtra (Segar Rd)",
+      info: "12km",
+      locationID: "GhIJQWDl0CIeQUARxks3icF8U8A"
+    },
+  ];
 
   return (
     <div>
@@ -55,26 +77,29 @@ export default function CartPage() {
         <div>
           <div className={classes.body}>
             <p className={classes.text}>Check availability for :</p>
-            <p className={classes.text}>{numberOfItems} items</p>
+            <p className={classes.textBold}>{numberOfItems} items</p>
           </div>
           <div className={classes.body}>
             <p className={classes.text}>Total Price :</p>
-            <p className={classes.text}>${price} </p>
+            <p className={classes.textBold}>${price} </p>
           </div>
           <div className={classes.title}>
             <p className={classes.subtitle}>I want the:</p>
           </div>
           <div className={classes.btnContainer}>
             <button className={classes.btn1}>
-              <p>📍 Nearest</p>
+              <p className={classes.btnText}>📍 Nearest</p>
             </button>
             <button className={classes.btn2}>
-              <p>💸 Cheapest</p>
+              <p className={classes.btnText}>💸 Cheapest</p>
             </button>
           </div>
 
           <div className={classes.store}>
             <h1 className={classes.header2}>Recommended Stores</h1>
+            {reccs.map((recc) => (
+              <Recommendation data={recc} />
+            ))}
           </div>
         </div>
       )}

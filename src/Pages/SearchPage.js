@@ -11,6 +11,7 @@ export default function SearchPage() {
   useEffect(() => {
     //call backend api to get a list of results
     console.log("HERE", params.keyword);
+    setInput(params.keyword);
   }, []);
 
   const resultArray = [
@@ -18,7 +19,6 @@ export default function SearchPage() {
       itemID: 1,
       name: "Kirin Beer",
       image: "www.google.com",
-      reviews: "4.5/5",
       price: "12",
       quantity: "12x330ml",
       stock: 3,
@@ -27,7 +27,6 @@ export default function SearchPage() {
       itemID: 2,
       name: "Kirin Black",
       image: "www.google.com",
-      reviews: "4.2/5",
       price: "11",
       quantity: "24x330ml",
       stock: 3,
@@ -36,16 +35,11 @@ export default function SearchPage() {
       itemID: 3,
       name: "Kirin Black",
       image: "www.google.com",
-      reviews: "4.2/5",
       price: "11",
       quantity: "24x330ml",
       stock: 3,
     },
   ];
-
-  const clearResults = () => {
-    localStorage.clear();
-  };
 
   const [input, setInput] = useState("");
   const navigate = useNavigate();
@@ -72,7 +66,7 @@ export default function SearchPage() {
             />
           </form>
         </div>
-        <p className={classes.subtitle}>3 results for 'kirin'</p>
+        <p className={classes.subtitle}>3 results for '{input}'</p>
         <div className={classes.results}>
           {resultArray.map((item) => (
             <SearchResult data={item} key={item.key} />
