@@ -11,10 +11,6 @@ export default function SearchResult(props) {
     navigate(`/${props.data.itemID}`);
   };
 
-  const cartHandler = () => {
-    props.addToCartHandler(props.data);
-  }
-
   const addToCart = () => {
     try{
       const old = JSON.parse(localStorage.getItem("results"))
@@ -31,7 +27,6 @@ export default function SearchResult(props) {
       <div className={classes.text}>
         <h1 className={classes.name}>{props.data.name}</h1>
         <p className={classes.quantity}>{props.data.quantity}</p>
-        <p className={classes.quantity}>{props.data.reviews}</p>
 
         <div className={classes.bottom}>
           <h3 className={classes.price}>$ {props.data.price}</h3>

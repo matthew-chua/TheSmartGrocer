@@ -34,6 +34,7 @@ export default function ItemPage() {
       openingHours: "Daily, 0900-2300",
       stock: 100,
       price: "$3.80 / bottle",
+      promo: false
     },
     {
       location: "FairPrice Xtra (Jurong Point)",
@@ -41,6 +42,7 @@ export default function ItemPage() {
       openingHours: "Daily, 0900-2300",
       stock: 100,
       price: "$3.80 / bottle",
+      promo: true
     },
   ];
 
@@ -60,7 +62,7 @@ export default function ItemPage() {
       reviews: "4.5/5",
       price: "12",
       quantity: "12x330ml",
-      stock: 3
+      stock: 3,
     },
     {
       itemID: 2,
@@ -69,7 +71,7 @@ export default function ItemPage() {
       reviews: "4.2/5",
       price: "11",
       quantity: "24x330ml",
-      stock: 3
+      stock: 3,
     },
     {
       itemID: 3,
@@ -78,7 +80,7 @@ export default function ItemPage() {
       reviews: "4.2/5",
       price: "11",
       quantity: "24x330ml",
-      stock: 3
+      stock: 3,
     },
   ];
 
