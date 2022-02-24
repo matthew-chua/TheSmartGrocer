@@ -1,0 +1,25 @@
+.root {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card {
+  background: rgb(195, 136, 231);
+  background: linear-gradient(
+    84deg,
+    rgba(195, 136, 231, 1) 35%,
+    rgba(216, 192, 255, 1) 100%
+  );
+
+  border-radius: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bottomText {
+  font-style: italic;
+  font-size: 1.7rem;
+  padding-top: 1rem;
+}
