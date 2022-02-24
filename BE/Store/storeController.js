@@ -3,7 +3,8 @@ const Store = require("./storeSchema");
 
 const fetchStoreHandler = (req, res) => {
   const storeID = { storeID: req.params.storeID };
-
+  res.status(200).send("Hello World");
+  
   Store.findOne(storeID)
     .then((result) => {
       res.status(200).send(result);
