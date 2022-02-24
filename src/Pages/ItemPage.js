@@ -7,6 +7,7 @@ import classes from "./ItemPage.module.css";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { useEffect } from "react";
+import SearchResult from "../Components/SearchResult";
 
 export default function ItemPage() {
 
@@ -51,6 +52,36 @@ export default function ItemPage() {
       "Clear golden yellow colour with light head; aromas of sweet malt, sour bread, light cereal and soft apple fruit with delicate floral, herb, apple/pear and citrus notes; dry, light bodied, crisp and refreshing.",
   };
 
+  const recommended = [
+    {
+      itemID: 1,
+      name: "Kirin Beer",
+      image: "www.google.com",
+      reviews: "4.5/5",
+      price: "12",
+      quantity: "12x330ml",
+      stock: 3
+    },
+    {
+      itemID: 2,
+      name: "Kirin Black",
+      image: "www.google.com",
+      reviews: "4.2/5",
+      price: "11",
+      quantity: "24x330ml",
+      stock: 3
+    },
+    {
+      itemID: 3,
+      name: "Kirin Black",
+      image: "www.google.com",
+      reviews: "4.2/5",
+      price: "11",
+      quantity: "24x330ml",
+      stock: 3
+    },
+  ];
+
   const navigate = useNavigate();
   const backHandler = () => {
     navigate(-1);
@@ -74,6 +105,12 @@ export default function ItemPage() {
 
         <div>
           <h1 className={classes.bottomText}>You might also like...</h1>
+          <div className={classes.reccs}>
+          {recommended.map((item)=>
+            (<SearchResult data={item} key={item.itemID}/>)
+          )}
+          </div>
+          
         </div>
       </div>
     </div>

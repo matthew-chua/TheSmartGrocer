@@ -42,4 +42,5 @@
 .icon {
   color: #cba4ff;
   font-size: 1.5rem;
+  z-index: 999;
 }
