@@ -43,10 +43,8 @@ export default function SearchPage() {
   localStorage.setItem("results", JSON.stringify(resultArray));
 
   const clearResults = () => {
-    localStorage.clear()
-  }
-
-  
+    localStorage.clear();
+  };
 
   return (
     <div>
