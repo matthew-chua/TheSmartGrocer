@@ -4,9 +4,28 @@ import Product from "../Components/Product";
 import Location from "../Components/Location";
 import classes from "./ItemPage.module.css";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+
+import { useEffect } from "react";
 
 export default function ItemPage() {
+
+  const params = useParams();
+  
+  useEffect(()=>{
+    
+    //make the API call with ITEM ID
+    
+    //params.item == itemID
+    console.log("HERE",params.item);
+
+    //set the location array
+
+    //set the item data
+
+
+  }, [])
+
   const locationArray = [
     {
       location: "FairPrice Xtra (Jurong Point)",

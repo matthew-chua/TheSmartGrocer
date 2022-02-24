@@ -17,8 +17,8 @@ function App() {
 
     <Routes>
       <Route exact path="/landing" element={<LandingPage/>} />
-      <Route exact path="/search" element={<SearchPage/>} />
-      <Route exact path="/item" element={<ItemPage/>} />
+      <Route exact path="/results/:keyword" element={<SearchPage/>} />
+      <Route exact path="/:item" element={<ItemPage/>} />
       <Route exact path="/cart" element={<CartPage/>} />
       <Route path="/*" element={<Navigate to='/landing'/>}/>        
       
