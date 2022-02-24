@@ -26,10 +26,14 @@ export default function CartPage() {
   const [cheapest, setCheapest] = useState(true);
 
   const cheapestHandler = () => {
+    setSelected((prev)=>(!prev));
     setCheapest(true);
   };
 
+  const [selected, setSelected] = useState(false);
+
   const nearestHandler = async () => {
+    setSelected((prev)=>(!prev));
     setCheapest(false);
     navigator.geolocation.getCurrentPosition((position) => {
       const latitude = position.coords.latitude;
@@ -67,7 +71,7 @@ export default function CartPage() {
       <NavBar />
       <div className={classes.title}>
         <h1 className={classes.header}>Shopping List</h1>
-        
+
         <h2 className={classes.subtitle}>
           Save your favourite items here for easy access!
         </h2>
@@ -104,10 +108,14 @@ export default function CartPage() {
             <p className={classes.subtitle}>I want the:</p>
           </div>
           <div className={classes.btnContainer}>
-            <button className={classes.btn1} onClick={nearestHandler}>
+            <button
+              className={classes.btn1}
+              style={{ background: selected ? "rgb(226, 159, 101)" : "white" }}
+              onClick={nearestHandler}
+            >
               <p className={classes.btnText}>📍 Nearest</p>
             </button>
-            <button className={classes.btn2} onClick={cheapestHandler}>
+            <button className={classes.btn2} onClick={cheapestHandler} style={{ background: !selected ? "rgb(226, 159, 101)" : "white" }}>
               <p className={classes.btnText}>💸 Cheapest</p>
             </button>
           </div>
