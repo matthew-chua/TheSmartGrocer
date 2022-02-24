@@ -123,3 +123,14 @@
   border-radius: 15px;
   display: flex;
 }
+
+.results{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+
+}

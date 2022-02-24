@@ -9,6 +9,37 @@ import NavBar from "../Components/NavBar";
 export default function CartPage() {
   const item = 1;
   const price = 120;
+
+  const resultArray = [
+    {
+      itemID: 1,
+      name: "Kirin Beer",
+      image: "www.google.com",
+      reviews: "4.5/5",
+      price: "12",
+      quantity: "12x330ml",
+      stock: 5
+    },
+    {
+      itemID: 2,
+      name: "Kirin Black",
+      image: "www.google.com",
+      reviews: "4.2/5",
+      price: "11",
+      quantity: "24x330ml",
+      stock: 10
+    },
+    {
+      itemID: 3,
+      name: "Kirin Black",
+      image: "www.google.com",
+      reviews: "4.2/5",
+      price: "11",
+      quantity: "24x330ml",
+      stock: 4
+    },
+  ];
+
   return (
     <div>
       <NavBar />
@@ -19,15 +50,21 @@ export default function CartPage() {
         </h2>
       </div>
 
-      <div className={classes.navigator}>
+      {/* <div className={classes.navigator}>
         <img src={left} className={classes.icon_left} />
         <img src={right} className={classes.icon_right} />
+      </div> */}
+
+      <div className={classes.results}>
+        {resultArray.map((item) => (
+          <CartItem data={item} key={item.key}/>
+        ))}
       </div>
 
-      <div className={classes.cartlist}>
+      {/* <div className={classes.cartlist}>
         <CartItem />
         <CartItem />
-      </div>
+      </div> */}
 
       <div className={classes.body}>
         <p className={classes.text}>Check availability for :</p>
