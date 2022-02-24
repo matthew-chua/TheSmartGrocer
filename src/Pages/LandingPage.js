@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../Components/NavBar";
 import classes from "./LandingPage.module.css";
 import { useNavigate } from "react-router-dom";
@@ -7,13 +7,11 @@ import { useNavigate } from "react-router-dom";
 import trolley from "../Assets/trolley.png";
 
 export default function LandingPage() {
-  const id = "test"
-
+  const [input, setInput] = useState("");
   const navigate = useNavigate();
 
   const submitHandler = () => {
-    
-    navigate(`/Results/${id}`);
+    navigate(`/Results/${input}`);
   };
 
   return (
@@ -23,7 +21,11 @@ export default function LandingPage() {
         <h1 className={classes.title}>TheSmartGrocer</h1>
         <div className={classes.search}>
           <form id="filterForm" onSubmit={submitHandler}>
-            <input className={classes.searchBar}></input>
+            <input
+              className={classes.searchBar}
+              value={input}
+              onInput={(e) => setInput(e.target.value)}
+            />
           </form>
         </div>
         <h2 className={classes.subtitle}>

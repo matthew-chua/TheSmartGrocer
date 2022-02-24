@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../Components/NavBar";
 
 import { useParams, useNavigate } from "react-router-dom";
@@ -46,12 +46,25 @@ export default function SearchPage() {
     localStorage.clear();
   };
 
+  const [input, setInput] = useState("");
+  const navigate = useNavigate();
+
+  const submitHandler = () => {
+    navigate(`/Results/${input}`);
+  };
+
   return (
     <div>
       <NavBar />
       <div className={classes.root}>
         <div className={classes.search}>
-          <input className={classes.searchBar} />
+          <form id="filterForm" onSubmit={submitHandler}>
+            <input
+              className={classes.searchBar}
+              value={input}
+              onInput={(e) => setInput(e.target.value)}
+            />
+          </form>
         </div>
         <p className={classes.subtitle}>3 results for 'kirin'</p>
         <div className={classes.results}>
