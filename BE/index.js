@@ -26,6 +26,7 @@ app.use("/store/", require("./Store/storeRoutes"));
 // Store Products
 app.use("/product/", require("./Product/productRoutes"));
 
+app.use("/store/", require("./Store/storeRoutes"));
 
 
 app.listen(process.env.PORT || port, () => {
