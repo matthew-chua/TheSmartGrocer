@@ -37,10 +37,10 @@ export default function CartPage() {
       </div>
       <div className={classes.btnContainer}>
         <button className={classes.btn1}>
-         📍 Nearest
+          <p>📍 Nearest</p>
         </button>
         <button className={classes.btn2}>
-          💸 Cheapest
+          <p>💸 Cheapest</p>
         </button>
       </div>
     </div>
