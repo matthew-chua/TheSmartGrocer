@@ -58,12 +58,17 @@ export default function SearchPage() {
     <div>
       <NavBar />
       <div className={classes.root}>
-      <div className={classes.search}>
-          <form className={classes.form} id="filterForm" onSubmit={submitHandler}>
+        <div className={classes.search}>
+          <form
+            className={classes.form}
+            id="filterForm"
+            onSubmit={submitHandler}
+          >
             <input
               className={classes.searchBar}
               value={input}
               onInput={(e) => setInput(e.target.value)}
+              type="text"
             />
           </form>
         </div>

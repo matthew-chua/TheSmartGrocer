@@ -27,6 +27,7 @@
     rgba(195, 136, 231, 1) 35%,
     rgba(216, 192, 255, 1) 100%
   );
+  font-size: 18px;
 }
 .search {
   padding-left: 2rem;

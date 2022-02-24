@@ -33,6 +33,10 @@
     rgba(195, 136, 231, 1) 35%,
     rgba(216, 192, 255, 1) 100%
   );
+  font-size: 20px;
+}
+input {
+  padding-left: 15px;
 }
 .search {
   display: flex;
