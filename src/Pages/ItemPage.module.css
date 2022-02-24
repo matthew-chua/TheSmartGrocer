@@ -23,3 +23,9 @@
   font-size: 1.7rem;
   padding-top: 1rem;
 }
+.reccs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
