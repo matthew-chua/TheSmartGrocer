@@ -19,7 +19,7 @@ app.use(
 );
 
 // uncomment if want to reseed data
-// reseedDB();
+reseedDB();
 
 // Store Routes
 app.use("/store/", require("./Store/storeRoutes"));
