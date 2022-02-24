@@ -27,7 +27,7 @@ function reseedDB() {
     }
   });
 
-  sqlite.run("CREATE TABLE products(id INTEGER PRIMARY KEY AUTOINCREMENT, brand varchar, item varchar, imageURL TEXT, country VARCHAR);", function (err) {
+  sqlite.run("CREATE TABLE products(id INTEGER PRIMARY KEY AUTOINCREMENT, brand varchar, item varchar, imageURL TEXT, country VARCHAR, description TEXT);", function (err) {
     if (err.error) {
       console.log(err.error);
     } else {
@@ -59,7 +59,7 @@ function reseedDB() {
     }
   });
 
-  sqlite.run("CREATE TABLE productlistings(id INTEGER PRIMARY KEY AUTOINCREMENT, stock INTEGER, outletID INTEGER, price INTEGER, description TEXT, isOffer INTEGER, link TEXT, productID INTEGER, FOREIGN KEY (outletID) REFERENCES outlet(id), FOREIGN KEY (productID) REFERENCES product(id));", function (err) {
+  sqlite.run("CREATE TABLE productlistings(id INTEGER PRIMARY KEY AUTOINCREMENT, stock INTEGER, outletID INTEGER, price INTEGER, isOffer INTEGER, link TEXT, productID INTEGER, FOREIGN KEY (outletID) REFERENCES outlet(id), FOREIGN KEY (productID) REFERENCES product(id));", function (err) {
     if (err.error) {
       console.log(err.error);
     } else {
@@ -82,8 +82,9 @@ function reseedDB() {
     let item = faker.commerce.productName();
     let imageURL = faker.image.imageUrl();
     let country = faker.address.country();
+    let description = faker.commerce.productDescription();
 
-    let sql = `INSERT INTO products (brand, item, imageURL, country) VALUES ("${brand}", "${item}", "${imageURL}", "${country}");`;
+    let sql = `INSERT INTO products (brand, item, imageURL, country, description) VALUES ("${brand}", "${item}", "${imageURL}", "${country}", "${description});`;
     sqlite.run(sql, function (err) {
       if (err.error) {
         console.log(err.error);
@@ -110,15 +111,14 @@ function reseedDB() {
 
   //productlistings
   for (i = 1; i < 21; i++) {
-    let stock = faker.datatype.number();
+    let stock = Math.floor(Math.random() * 100);
     let outletID = Math.floor(Math.random() * 10) + 1;
     let price = faker.commerce.price();
-    let description = faker.commerce.productDescription();
-    let isOffer = Math.floor(Math.random());
+    let isOffer = Math.floor(Math.random()) + 1;
     let link = faker.internet.url();
     let productID = Math.floor(Math.random() * 10) + 1;
 
-    let sql = `INSERT INTO productlistings (stock, outletID, price, description, isOffer, link, productID) VALUES (${stock}, ${outletID}, ${price}, "${description}", ${isOffer}, "${link}", ${productID});`;
+    let sql = `INSERT INTO productlistings (stock, outletID, price, isOffer, link, productID) VALUES (${stock}, ${outletID}, ${price}, "${description}", ${isOffer}, "${link}", ${productID});`;
     sqlite.run(sql, function (err) {
       if (err.error) {
         console.log(err.error);

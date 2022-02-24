@@ -19,14 +19,12 @@ app.use(
 );
 
 // uncomment if want to reseed data
-reseedDB();
+// reseedDB();
 
 // Store Routes
 app.use("/store/", require("./Store/storeRoutes"));
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+
 
 app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}!`);
