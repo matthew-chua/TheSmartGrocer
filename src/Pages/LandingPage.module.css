@@ -1,6 +1,40 @@
-.root{
-    font-family: 'Lobster Two', cursive;
+.root {
+  font-family: "Lobster Two", cursive;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
-.subtitle{
-    font-family: 'Roboto', sans-serif;
+.title {
+  padding-top: 5rem;
+  font-size: 3rem;
+  color: rgb(195, 136, 231);
+  color: linear-gradient(
+    84deg,
+    rgba(195, 136, 231, 1) 35%,
+    rgba(216, 192, 255, 1) 100%
+  );
+}
+.subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.image {
+  bottom: 1rem;
+  position: absolute;
+}
+.searchBar {
+  width: 95%;
+  height: 3rem;
+  border-radius: 3rem;
+  border-color: rgb(195, 136, 231);
+  border-color: linear-gradient(
+    84deg,
+    rgba(195, 136, 231, 1) 35%,
+    rgba(216, 192, 255, 1) 100%
+  );
+}
+.search {
+  display: flex;
+  justify-content: center;
 }

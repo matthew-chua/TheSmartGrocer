@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  align-items: baseline;
+  font-size: 1rem;
+}
+.link {
+  font-size: 1.2rem;
+}
+.logo {
+  color: rgb(195, 136, 231);
+  color: linear-gradient(
+    84deg,
+    rgba(195, 136, 231, 1) 35%,
+    rgba(216, 192, 255, 1) 100%
+  );
+  font-family: "Lobster Two";
+  font-size: 1.2rem;
+}
