@@ -1,0 +1,30 @@
+.root{
+    display: flex;
+    flex-direction: column;
+}
+.results{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+
+}
+.subtitle{
+    font-family: 'Roboto', sans-serif;
+    padding-left: 2rem;
+    font-size: 1rem;
+    font-style: italic;
+}
+.searchBar{
+    border-radius: 2rem;
+    width: 70%;
+    
+    border-color: #cba4ff;
+}
+.search{
+    padding-left: 2rem;
+
+}
