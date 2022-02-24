@@ -21,6 +21,7 @@ export default function SearchPage() {
       reviews: "4.5/5",
       price: "12",
       quantity: "12x330ml",
+      stock: 3
     },
     {
       itemID: 2,
@@ -29,6 +30,7 @@ export default function SearchPage() {
       reviews: "4.2/5",
       price: "11",
       quantity: "24x330ml",
+      stock: 3
     },
     {
       itemID: 3,
@@ -37,11 +39,11 @@ export default function SearchPage() {
       reviews: "4.2/5",
       price: "11",
       quantity: "24x330ml",
+      stock: 3
     },
   ];
 
-  localStorage.setItem("results", JSON.stringify(resultArray));
-
+  
   const clearResults = () => {
     localStorage.clear();
   };
@@ -69,7 +71,7 @@ export default function SearchPage() {
         <p className={classes.subtitle}>3 results for 'kirin'</p>
         <div className={classes.results}>
           {resultArray.map((item) => (
-            <SearchResult data={item} key={item.key} />
+            <SearchResult data={item} key={item.key}/>
           ))}
         </div>
       </div>
