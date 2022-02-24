@@ -21,7 +21,7 @@ export default function SearchPage() {
       reviews: "4.5/5",
       price: "12",
       quantity: "12x330ml",
-      stock: 3
+      stock: 3,
     },
     {
       itemID: 2,
@@ -30,7 +30,7 @@ export default function SearchPage() {
       reviews: "4.2/5",
       price: "11",
       quantity: "24x330ml",
-      stock: 3
+      stock: 3,
     },
     {
       itemID: 3,
@@ -39,11 +39,10 @@ export default function SearchPage() {
       reviews: "4.2/5",
       price: "11",
       quantity: "24x330ml",
-      stock: 3
+      stock: 3,
     },
   ];
 
-  
   const clearResults = () => {
     localStorage.clear();
   };
@@ -59,8 +58,8 @@ export default function SearchPage() {
     <div>
       <NavBar />
       <div className={classes.root}>
-        <div className={classes.search}>
-          <form id="filterForm" onSubmit={submitHandler}>
+      <div className={classes.search}>
+          <form className={classes.form} id="filterForm" onSubmit={submitHandler}>
             <input
               className={classes.searchBar}
               value={input}
@@ -71,7 +70,7 @@ export default function SearchPage() {
         <p className={classes.subtitle}>3 results for 'kirin'</p>
         <div className={classes.results}>
           {resultArray.map((item) => (
-            <SearchResult data={item} key={item.key}/>
+            <SearchResult data={item} key={item.key} />
           ))}
         </div>
       </div>

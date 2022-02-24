@@ -20,7 +20,7 @@ export default function LandingPage() {
       <div className={classes.root}>
         <h1 className={classes.title}>TheSmartGrocer</h1>
         <div className={classes.search}>
-          <form id="filterForm" onSubmit={submitHandler}>
+          <form className={classes.form} id="filterForm" onSubmit={submitHandler}>
             <input
               className={classes.searchBar}
               value={input}

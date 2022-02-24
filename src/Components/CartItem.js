@@ -24,7 +24,6 @@ export default function CartItem(props) {
       />
       <h4 className={classes.header}>{props.data.name}</h4>
       <p className={classes.content}>12 x 350ml</p>
-
       <div className={classes.body}>
         <p className={classes.price}>${props.data.price}</p>
         <div className={classes.maxPax}>
