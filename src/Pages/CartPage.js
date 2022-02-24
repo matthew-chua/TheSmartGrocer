@@ -11,21 +11,24 @@ export default function CartPage() {
   const price = 120;
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <div className={classes.title}>
         <h1 className={classes.header}>Shopping List</h1>
         <h2 className={classes.subtitle}>
           Save your favourite items here for easy access !
         </h2>
       </div>
+
       <div className={classes.navigator}>
         <img src={left} className={classes.icon_left} />
         <img src={right} className={classes.icon_right} />
       </div>
+
       <div className={classes.cartlist}>
         <CartItem />
         <CartItem />
       </div>
+
       <div className={classes.body}>
         <p className={classes.text}>Check availability for :</p>
         <p className={classes.text}>{item} items</p>
@@ -37,6 +40,7 @@ export default function CartPage() {
       <div className={classes.title}>
         <p className={classes.subtitle}>I want the:</p>
       </div>
+
       <div className={classes.btnContainer}>
         <button className={classes.btn1}>
           <p>📍 Nearest</p>
@@ -44,6 +48,10 @@ export default function CartPage() {
         <button className={classes.btn2}>
           <p>💸 Cheapest</p>
         </button>
+      </div>
+
+      <div className={classes.store}>
+        <h1 className={classes.header2}>Recommended Stores</h1>
       </div>
     </div>
   );

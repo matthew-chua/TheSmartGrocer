@@ -4,6 +4,14 @@
 .header {
   font-family: "Lobster Two", cursive;
 }
+
+.header2 {
+  font-family: "Lobster Two", cursive;
+  color: white;
+  margin-left: 5vw;
+  margin-top: 2vh;
+}
+
 .subtitle {
   font-family: "Roboto", sans-serif;
   font-size: 3vw;
@@ -100,4 +108,18 @@
 .btn2:active {
   background-color: rgba(219, 191, 254, 0.3);
   transition: background-color 0.2s;
+}
+
+.store {
+  width: 87vw;
+  height: 30vh;
+  margin: 7%;
+  background: rgb(195, 136, 231);
+  background: linear-gradient(
+    84deg,
+    rgba(195, 136, 231, 1) 35%,
+    rgba(216, 192, 255, 1) 100%
+  );
+  border-radius: 15px;
+  display: flex;
 }
