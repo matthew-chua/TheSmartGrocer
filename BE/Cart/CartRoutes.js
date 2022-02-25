@@ -1,12 +1,19 @@
 const express = require("express");
 
 const {
-    keywordSearch
+    returnCheapest,
+    returnNearest
 } = require("./CartController");
+
+const router = express.Router();
 
 // Routes (They all should just be 1 line)
 
-// Fetch User
-router.get("/:keyword", keywordSearch);
+// get nearest
+router.get("/nearest", returnNearest);
+
+// get cheapest
+router.get("/cheapest", returnCheapest);
+
 
 module.exports = router;

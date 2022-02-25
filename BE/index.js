@@ -21,13 +21,10 @@ app.use(
 // uncomment if want to reseed data
 reseedDB();
 
-// Store Routes
-app.use("/store/", require("./Store/storeRoutes"));
+// Cart Routes
+app.use("/cart/", require("./Cart/cartRoutes"));
 // Store Products
 app.use("/product/", require("./Product/productRoutes"));
-
-app.use("/store/", require("./Store/storeRoutes"));
-
 
 app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}!`);
